@@ -1,3 +1,16 @@
+decorators:
+    - name: ansible-input
+      schema:
+        $id: root
+        $schema: http://json-schema.org/draft-07/schema#
+        additionalProperties: false
+        properties:
+            name:
+                description: first name of user
+                type: string
+        required:
+            - name
+        type: object
 repositories:
     - name: example-scripts-repo
       description: Simple repository for quick start
@@ -11,3 +24,4 @@ services:
         - hello-ansible.yml
       working-directory: ""
       repository: example-scripts-repo
+      decorator: ansible-input
