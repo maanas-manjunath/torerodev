@@ -1,0 +1,13 @@
+repositories:
+    - name: example-scripts-repo
+      description: Simple repository for quick start
+      url: https://github.com/maanas-manjunath/torerodev.git
+      reference: main
+services:
+    - name: hello-ansible
+      type: ansible-playbook
+      description: Quick Start Example
+      playbooks:
+        - hello-ansible.yml
+      working-directory: ""
+      repository: example-scripts-repo
